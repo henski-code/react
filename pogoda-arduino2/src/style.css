@@ -1,0 +1,138 @@
+html{font-size:10px;}
+body{
+    margin:0;
+    padding:0;
+    font-family: 'Roboto', sans-serif;
+    font-size:1.6rem;
+  
+}
+*{
+    box-sizing: border-box;
+}
+
+#container{  /*<-Nadrzędny element na stronie*/
+    /* display:grid;
+    grid-template-rows: 80px calc(100vh - 145px) 50px; */
+    position:relative;
+    min-height:100vh;
+}
+
+nav{
+  width:100%;
+  padding:0px 10px;
+    -webkit-box-shadow: 0px 9px 11px -4px rgba(0,0,0,0.4);
+    -moz-box-shadow: 0px 9px 11px -4px rgba(0,0,0,0.4);
+    box-shadow: 0px 9px 11px -4px rgba(0,0,0,0.4);
+    height:70px;
+}
+
+nav>#nav-list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+    margin:0;
+}
+nav>#nav-list>li{
+    flex:1;
+    text-align: center;
+}
+
+#nav-list>li::after{
+    content: "|";
+    float:right;
+    
+}
+#nav-list>li:last-of-type:after{content: "";}
+#nav-list>h2{
+    flex:1;
+    text-align: center;
+    padding:0 10px;
+}
+#nav-list{
+    margin:0;
+    padding:0 !important;
+}
+.nav-list__link{
+    transition:transform .2s;
+}
+.nav-list__link:hover{
+    color:#BADA55;
+    transform:scale(1.07);
+    cursor: pointer;
+}
+#main-page{
+    display: flex;
+    align-items:space-between;
+    justify-content:space-around;
+    min-height:calc(100vh - 70px - 80px);
+}
+.main-page__item{
+    display: grid;
+    grid-template-rows: 70% 1fr;
+    text-align: center;
+}
+
+.main-page__item-img{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.pictagram.tempZew, .pictagram.tempWew{
+    width:70px;
+    height:250px;
+}
+.pictagram.cisnienie{
+    width:214px;
+    height:205px;
+}
+.pictagram.wilgotnosc{
+    width:306px;
+    height:306px;
+}
+.new-readings{
+    font-size:3.5rem;
+    color:#BADA55;
+    font-weight: 600;
+}
+#site-content{
+    width:100%;
+    padding:20px;
+    text-align: center;
+    min-height:calc(100vh - 70px - 80px);
+}
+.site-title{
+    display: block;
+    margin:30px 0;
+    font-size:3.5rem;
+    color:#BADA55;
+}
+footer{
+    width:100%;
+    text-align: center;
+    border-top:1px solid lightgrey;
+    padding:30px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+a, a:visited, a:focus{
+    color:inherit;
+    text-decoration: none;
+    font-weight:normal;
+}
+.wykres{
+    width:60vw;
+    height:25vw;
+    margin:20px;
+    margin: 50px auto;
+}
+@media (max-width: 850px){
+    #main-page{
+        flex-direction: column;
+        align-items:space-between;
+        justify-content:space-around;
+    }
+}
